@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>BurGrr</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container flex">
+            <div class="nav-row">
+                <a href="" class="nav-title">BurGrr</a>
+                <a href="javascript:void(0);" class="nav-toggle" id="nav-toggle">&#9776;</a>
+            </div>
+            <div class="nav-flex nav-flex-toggle" id="nav-flex">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Body -->
+    <section class="body" id="home">
+        <div class="container grid">
+            <div>
+                <h1 class="text-center">BurGrr - The Burger Stop</h1>
+                <p class="text-center">Enjoy mouth-watering burgers from the comfort of your homes.</p>
+                <div>
+                    <a href="https://www.swiggy.com/">Order Now</a>
+                </div>
+            </div>
+            <img src="resources/hamburger.svg" alt="BurGrr">
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu" id="menu">
+        <div id="modal">
+            <div class="menu-modal">
+                <h2 class="text-center" id="menu-modal-header">Modal Heading</h2>
+                <a href="javascript:void(0);" class="menu-modal-close">X</a>
+                <p class="text-center" id="menu-modal-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Excepturi, ex.</p>
+                <p class="text-center" id="menu-modal-price">Price</p>
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="text-center">Our Menu</h1>
+            <hr>
+            <div class="grid">
+                <div class="menu-items" onclick="loadModal('Chicken')">
+                    <img src="resources/hamburger.svg" alt="Chicken Burger">
+                    <h2 class="text-center">Chicken Burger</h2>
+                </div>
+                <div class="menu-items" onclick="loadModal('Veg')">
+                    <img src="resources/hamburger.svg" alt="Veg Burger">
+                    <h2 class="text-center">Veg Burger</h2>
+                </div>
+                <div class="menu-items" onclick="loadModal('Mutton')">
+                    <img src="resources/hamburger.svg" alt="Mutton Burger">
+                    <h2 class="text-center">Mutton Burger</h2>
+                </div>
+                <div class="menu-items" onclick="loadModal('Fish')">
+                    <img src="resources/hamburger.svg" alt="Fish Burger">
+                    <h2 class="text-center">Fish Burger</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h1 class="text-center">Contact Us</h1>
+            <hr>
+            <div class="grid">
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30141.022150968547!2d72.94482302678907!3d19.211453718648066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b964b7d1e2d7%3A0xaecc0cc3a7bd60a4!2sThane%20West%2C%20Thane%2C%20Maharashtra%20400606!5e0!3m2!1sen!2sin!4v1606836091810!5m2!1sen!2sin"
+                        style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <h2 class="text-center">Location</h2>
+                </div>
+                <div>
+                    <h2>Email</h2>
+                    <p>If you have any queries regarding our food or services, kindly contact us at <a
+                            href="mailto:burgrr@gmail.com">burgrr@gmail.com</a></p>
+                    <h2>Phone Number</h2>
+                    <a href="tel:+91-1234567890">+91-1234567890</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="text-center">&#169;BurGrr - The Burger Stop</p>
+            <p class="text-center">Icon made by <a href="https://www.flaticon.com/authors/freepik"
+                    title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
+                    title="Flaticon">www.flaticon.com</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

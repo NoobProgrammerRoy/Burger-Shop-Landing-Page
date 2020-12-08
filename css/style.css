@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Utilities */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.container{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    gap: 1rem;
+}
+
+
+/* Navbar */
+nav{
+    background-color: crimson;
+}
+
+nav a{
+    color: white;
+    margin: 1rem;
+}
+
+nav a:hover{
+    color: #d0d0d0;
+}
+
+.nav-title{
+    font-size: 1.25rem;
+}
+
+.nav-flex{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+
+
+
+/* Body */
+.body{
+    background-color: crimson;
+}
+
+.body .grid{
+    grid-template-columns: 2fr 1fr;
+}
+
+.body > div:first-child{
+    padding: 0.5rem;
+}
+
+.body p, .body h1, .body a{
+    color: white;
+    position: relative;
+    animation-name: slide-in;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.body h1{
+    margin-top: 2rem;
+}
+
+.body p{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.body > div > div > div{
+    text-align: center;
+}
+
+.body a{
+    background-color: white;
+    color: crimson;
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    border-radius: 50px;
+    transition-duration: 0.1s;
+    font-weight: 800;
+}
+
+.body a:hover{
+    background-color: #d0d0d0;
+    border-color: #d0d0d0;
+}
+
+.body img{
+    width: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 2rem;
+    animation-name: img-slide-in;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    transition-duration: 0.1s;
+}
+
+.body img:hover{
+    top: 1.5rem;
+}
+
+
+/* Menu */
+.menu{
+    margin-top: 2rem;
+}
+
+.menu hr{
+    margin: 1rem 0;
+}
+
+.menu .grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.menu-items{
+    box-shadow: 0 0 1px;
+    text-align: center;
+}
+
+.menu-items:hover{
+    background-color: azure;
+    cursor: pointer;
+}
+
+.menu-items h2, .menu-modal h2{
+    background-color: crimson;
+    color: white;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.menu img{
+    width: 10rem;
+    margin: 0.5rem;
+}
+
+.modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    animation-name: modal;
+    animation-duration: 0.75s;
+}
+
+.menu-modal{
+    display: none;
+    position: fixed;
+    left: 15vw;
+    top: 25vh;
+    z-index: 2;
+    width: 70%;
+    background-color: azure;
+    box-shadow: 0 0 4px;
+    animation-name: modal;
+    animation-duration: 0.75s;
+}
+
+.menu-modal-header{
+    position: relative;
+}
+
+.menu-modal-close{
+    position: absolute;
+    right: 0.75rem;
+    top: 0.75rem;
+    color: white;
+}
+
+.menu-modal-close:hover{
+    color: #d0d0d0;
+}
+
+.menu-modal p{
+    padding: 0.75rem 0.5rem;
+}
+
+/* Contact */
+.contact{
+    margin-top: 2rem;
+}
+
+.contact hr{
+    margin: 1rem 0;
+}
+
+.contact .grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.contact > div > div > div:first-child{
+    box-shadow: 0 0 1px;
+}
+
+.contact iframe{
+    width: 100%;
+}
+
+.contact h2{
+    padding: 0.5rem 0;
+}
+
+.contact a{
+    color: black;
+}
+
+
+/* Footer */
+.footer{
+    margin-top: 2rem;
+    padding: 0.5rem 0;
+    background-color: crimson;
+}
+
+.footer p{
+    color: white;
+}
+
+.footer a{
+    color: whitesmoke;
+}
+
+
+
+
+/* Mobile */
+@media all and (max-width: 767px){
+    nav a{
+        margin: 0.75rem;
+    }
+
+    .container{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .flex{
+        flex-direction: column;
+    }
+
+    .nav-row{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nav-flex{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-flex-toggle{
+        display: none;
+    }
+
+    .nav-toggle{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .body .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .body img{
+        width: 12rem;
+    }
+
+    .menu .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+/* Animations */
+@keyframes slide-in{
+    from{
+        left: -12rem;
+    }
+    to{
+        left: 0;
+    }
+}
+
+@keyframes img-slide-in{
+    from{
+        left: 12rem;
+    }
+    to{
+        left: 0;
+    }
+}
+
+@keyframes modal{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100%;
+    }
+}
